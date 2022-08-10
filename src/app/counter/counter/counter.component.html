@@ -1,0 +1,20 @@
+<h3>{{title}}</h3>
+
+<button (click)="modificar(-1)">-</button>
+<span>{{counter}}</span>
+<button (click)="modificar(1)">+</button>
+
+<div *ngIf="historial.length > 0; else emptyHistorial">
+    <ul>
+        <li *ngFor="let numero of historial">
+            {{numero}}
+        </li>
+    </ul>
+</div>
+
+<ng-template #emptyHistorial>
+    <p>El historial esta vacio meu irmao</p>
+</ng-template>
+
+
+
